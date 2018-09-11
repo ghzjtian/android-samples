@@ -106,6 +106,10 @@
             android:name=".MyLocationDemoActivity"
             android:label="@string/my_location_demo_label"/>
         <activity
+            android:name=".GetMyLocationDemoActivity"
+            android:label="取得当前位置的坐标"/>
+
+        <activity
             android:name=".OptionsDemoActivity"
             android:label="@string/options_demo_label"/>
         <activity

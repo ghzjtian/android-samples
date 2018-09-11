@@ -38,8 +38,7 @@ public class DemoDetails {
      */
     public final Class<? extends AppCompatActivity> activityClass;
 
-    public DemoDetails(
-            int titleId, int descriptionId, Class<? extends AppCompatActivity> activityClass) {
+    public DemoDetails( int titleId, int descriptionId, Class<? extends AppCompatActivity> activityClass) {
         this.titleId = titleId;
         this.descriptionId = descriptionId;
         this.activityClass = activityClass;

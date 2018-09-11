@@ -87,6 +87,10 @@
     <string name="my_location">My Location</string>
     <string name="my_location_demo_label">My Location Demo</string>
     <string name="my_location_demo_description">Demonstrates how to use GMS Location.</string>
+
+    <string name="get_my_location_demo_label">我的位置</string>
+    <string name="get_my_location_demo_description">取得当前位置的信息</string>
+
     <string name="mylocation_button">My Location Button</string>
     <string name="mylocation_layer">My Location Layer</string>
     <string name="none_map">None</string>
