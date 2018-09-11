@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.mapdemo.utils.GPS;
+import com.example.mapdemo.utils.GPSConverterUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -109,11 +111,15 @@ public class GetMyLocationDemoActivity extends AppCompatActivity implements OnMa
                     public void onSuccess(Location location) {
                         // Got last known location. In some rare situations, this can be null.
                         if (location != null) {
-                            Log.w(TAG,"location,Latitude:"+location.getLatitude()+" Longtitude:"+location.getLongitude());
+
+                            Log.w(TAG,"WGS84 location,Latitude:"+location.getLatitude()+" Longtitude:"+location.getLongitude());
+                            GPS gps = GPSConverterUtils.gps84_To_Gcj02(location.getLatitude(),location.getLongitude());
+
+                            Log.w(TAG,"GCJ-02 location,Latitude:"+gps.getLat()+" Longtitude:"+gps.getLon());
                             // Logic to handle location object
                             //Getting longitude and latitude
-                            longitude = location.getLongitude();
-                            latitude = location.getLatitude();
+                            longitude = gps.getLon();
+                            latitude = gps.getLat();
 
                             //moving the map to location
                             moveMap();
